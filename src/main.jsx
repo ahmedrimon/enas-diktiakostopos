@@ -12,6 +12,8 @@ import AuthLayout from './layouts/AuthLayout';
 import Login from './pages/Authentication/Login/Login';
 import Register from './pages/Authentication/Register/Register';
 import AuthProvider from './contexts/AuthContext/AuthProvider';
+import PrivateRoute from './routes/PrivateRoute';
+import SendParcel from './pages/SendParcel/SendParcel';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home
+      },
+      {
+        path: 'sendParcel',
+        element: <PrivateRoute><SendParcel></SendParcel></PrivateRoute>
       }
     ]
   },

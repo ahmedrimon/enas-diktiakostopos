@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router";
 
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
                                 <li><a>Submenu 2</a></li>
                             </ul>
                         </li>
-                        <li><a>Item 3</a></li>
+                        <li><NavLink to="/sendParcel">SendParcel</NavLink></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -36,11 +37,11 @@ export default function Navbar() {
                             </ul>
                         </details>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li><NavLink to="/sendParcel">SendParcel</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <Link to="/login" className="btn">Login</Link>
             </div>
         </div>
     )
